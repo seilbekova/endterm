@@ -1,0 +1,42 @@
+Bonus Task: In-Memory Cache
+
+Goal:
+Improve application performance by adding a simple in-memory caching mechanism for frequently accessed data. In this project, the getAllBooks() method (list of all books) is cached.
+
+Implementation:
+
+A new package com.library.cache was created.
+
+The Cache interface was defined with the following methods:
+
+void put(String key, Object value) – stores an object in the cache with the given key.
+
+Optional<Object> get(String key) – retrieves an object from the cache.
+
+void remove(String key) – removes an entry by key.
+
+void clear() – clears the entire cache.
+
+The InMemoryCache implementation uses a thread-safe ConcurrentHashMap. The class is implemented as a Singleton (private constructor, static getInstance() method), ensuring a single cache instance throughout the application.
+
+In the BookService class, the following were added:
+
+A field cache = InMemoryCache.getInstance().
+
+A constant ALL_BOOKS_KEY = "allBooks".
+
+The getAllBooks() method now first checks if data exists in the cache. If the key is present, the cached value is returned (with a log message: "Returning cached list of books"). If not, the data is loaded from the database, stored in the cache, and then returned.
+
+In the createBook, updateBook, and deleteBook methods, after a successful database operation, cache.remove(ALL_BOOKS_KEY) is called, which invalidates the cache (log: "Cache invalidated after ...").
+
+Benefits:
+
+Reduces database load on repeated requests for the book list.
+
+Transparent invalidation on data changes – ensures data remains up-to-date.
+
+Simple and lightweight – the cache is stored in memory and requires no external systems.
+
+Complies with SOLID principles: the interface separates abstraction from implementation, the Singleton is implemented correctly, and the cache does not mix with business logic.
+
+Thread-safe due to the use of ConcurrentHashMap.
