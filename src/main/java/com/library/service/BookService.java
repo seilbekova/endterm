@@ -1,5 +1,7 @@
 package com.library.service;
 
+import com.library.cache.Cache;
+import com.library.cache.InMemoryCache;
 import com.library.model.Author;
 import com.library.model.Book;
 import com.library.patterns.Builder.BookBuilder;
@@ -23,9 +25,25 @@ public class BookService {
 
     private final LoggerService logger = LoggerService.getInstance();
 
+    // --- Кэш поля ---
+    private final Cache cache = InMemoryCache.getInstance();
+    private static final String ALL_BOOKS_KEY = "allBooks";
+
+    // --- Методы ---
+
     public List<Book> getAllBooks() {
-        logger.logInfo("Fetching all books");
-        return bookRepository.findAll();
+        // 1. Проверяем кэш
+        var cached = cache.get(ALL_BOOKS_KEY);
+        if (cached.isPresent()) {
+            logger.logInfo("Returning cached list of books");
+            return (List<Book>) cached.get();
+        }
+
+        // 2. Если нет в кэше – загружаем из БД
+        logger.logInfo("Fetching all books from database");
+        List<Book> books = bookRepository.findAll();
+        cache.put(ALL_BOOKS_KEY, books);
+        return books;
     }
 
     public Book getBookById(int id) {
@@ -58,6 +76,11 @@ public class BookService {
 
         book.validate();
         Book savedBook = bookRepository.save(book);
+
+        // Инвалидация кэша
+        cache.remove(ALL_BOOKS_KEY);
+        logger.logInfo("Cache invalidated after creating book");
+
         logger.logInfo("Book created successfully with ID: " + savedBook.getId());
         return savedBook;
     }
@@ -82,6 +105,11 @@ public class BookService {
         book.setId(id);
         book.validate();
         Book updatedBook = bookRepository.save(book);
+
+        // Инвалидация кэша
+        cache.remove(ALL_BOOKS_KEY);
+        logger.logInfo("Cache invalidated after updating book");
+
         logger.logInfo("Book updated successfully with ID: " + id);
         return updatedBook;
     }
@@ -96,6 +124,11 @@ public class BookService {
         }
 
         bookRepository.delete(id);
+
+        // Инвалидация кэша
+        cache.remove(ALL_BOOKS_KEY);
+        logger.logInfo("Cache invalidated after deleting book");
+
         logger.logInfo("Book deleted successfully with ID: " + id);
     }
 
@@ -135,7 +168,11 @@ public class BookService {
             throw new RuntimeException(error);
         }
 
-        return bookRepository.save(book);
+        Book savedBook = bookRepository.save(book);
+        // Инвалидация кэша, так как создана новая книга
+        cache.remove(ALL_BOOKS_KEY);
+        logger.logInfo("Cache invalidated after factory book creation");
+        return savedBook;
     }
 
     // Builder pattern example
@@ -173,12 +210,10 @@ public class BookService {
             throw new RuntimeException(error);
         }
 
-        return bookRepository.save(book);
+        Book savedBook = bookRepository.save(book);
+        // Инвалидация кэша
+        cache.remove(ALL_BOOKS_KEY);
+        logger.logInfo("Cache invalidated after builder book creation");
+        return savedBook;
     }
 }
-
-
-
-
-
-

@@ -1,9 +1,7 @@
-2026-02-08 22:58:10 [main] INFO  com.library.EndtermApplication - Starting EndtermApplication using Java 25.0.1 on DESKTOP-7Q52IS2 with PID 7520 (C:\Users\Admin\IdeaProjects\demo\target\classes started by Admin in C:\Users\Admin\IdeaProjects\demo)
-2026-02-08 22:58:10 [main] DEBUG com.library.EndtermApplication - Running with Spring Boot v2.7.0, Spring v5.3.20
-2026-02-08 22:58:10 [main] INFO  com.library.EndtermApplication - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 22:58:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 22:58:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
-2026-02-08 22:58:12 [main] ERROR o.s.boot.SpringApplication - Application run failed
+2026-02-14 09:08:33 [main] INFO  com.library.EndtermApplication - Starting EndtermApplication using Java 25.0.1 on DESKTOP-7Q52IS2 with PID 21228 (C:\Users\Admin\IdeaProjects\demo\target\classes started by Admin in C:\Users\Admin\IdeaProjects\demo)
+2026-02-14 09:08:33 [main] DEBUG com.library.EndtermApplication - Running with Spring Boot v2.7.0, Spring v5.3.20
+2026-02-14 09:08:33 [main] INFO  com.library.EndtermApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-14 09:08:35 [main] ERROR o.s.boot.SpringApplication - Application run failed
 java.lang.IllegalArgumentException: No visible constructors in class com.library.patterns.Singleton.AppConfig
 	at org.springframework.cglib.proxy.Enhancer.filterConstructors(Enhancer.java:763)
 	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:662)
@@ -37,12 +35,13 @@ java.lang.IllegalArgumentException: No visible constructors in class com.library
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
 	at com.library.EndtermApplication.main(EndtermApplication.java:11)
-2026-02-08 22:58:18 [main] INFO  com.library.EndtermApplication - Starting EndtermApplication using Java 25.0.1 on DESKTOP-7Q52IS2 with PID 14636 (C:\Users\Admin\IdeaProjects\demo\target\classes started by Admin in C:\Users\Admin\IdeaProjects\demo)
-2026-02-08 22:58:18 [main] DEBUG com.library.EndtermApplication - Running with Spring Boot v2.7.0, Spring v5.3.20
-2026-02-08 22:58:18 [main] INFO  com.library.EndtermApplication - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 22:58:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 22:58:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
-2026-02-08 22:58:18 [main] ERROR o.s.boot.SpringApplication - Application run failed
+2026-02-14 09:37:59 [main] INFO  com.library.EndtermApplication - Starting EndtermApplication using Java 25.0.1 on DESKTOP-7Q52IS2 with PID 22752 (C:\Users\Admin\IdeaProjects\demo\target\classes started by Admin in C:\Users\Admin\IdeaProjects\demo)
+2026-02-14 09:37:59 [main] DEBUG com.library.EndtermApplication - Running with Spring Boot v2.7.0, Spring v5.3.20
+2026-02-14 09:37:59 [main] INFO  com.library.EndtermApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-14 09:38:03 [main] INFO  com.library.EndtermApplication - Starting EndtermApplication using Java 25.0.1 on DESKTOP-7Q52IS2 with PID 16820 (C:\Users\Admin\IdeaProjects\demo\target\classes started by Admin in C:\Users\Admin\IdeaProjects\demo)
+2026-02-14 09:38:03 [main] DEBUG com.library.EndtermApplication - Running with Spring Boot v2.7.0, Spring v5.3.20
+2026-02-14 09:38:03 [main] INFO  com.library.EndtermApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-14 09:38:04 [main] ERROR o.s.boot.SpringApplication - Application run failed
 java.lang.IllegalArgumentException: No visible constructors in class com.library.patterns.Singleton.AppConfig
 	at org.springframework.cglib.proxy.Enhancer.filterConstructors(Enhancer.java:763)
 	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:662)
@@ -76,8 +75,40 @@ java.lang.IllegalArgumentException: No visible constructors in class com.library
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
 	at com.library.EndtermApplication.main(EndtermApplication.java:11)
-2026-02-08 22:58:34 [main] INFO  com.library.EndtermApplication - Starting EndtermApplication using Java 25.0.1 on DESKTOP-7Q52IS2 with PID 8156 (C:\Users\Admin\IdeaProjects\demo\target\classes started by Admin in C:\Users\Admin\IdeaProjects\demo)
-2026-02-08 22:58:34 [main] DEBUG com.library.EndtermApplication - Running with Spring Boot v2.7.0, Spring v5.3.20
-2026-02-08 22:58:34 [main] INFO  com.library.EndtermApplication - No active profile set, falling back to 1 default profile: "default"
-2026-02-08 22:58:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-08 22:58:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2026-02-14 13:37:08 [main] INFO  com.library.EndtermApplication - Starting EndtermApplication using Java 25.0.1 on DESKTOP-7Q52IS2 with PID 3892 (C:\Users\Admin\IdeaProjects\demo\target\classes started by Admin in C:\Users\Admin\IdeaProjects\demo)
+2026-02-14 13:37:08 [main] DEBUG com.library.EndtermApplication - Running with Spring Boot v2.7.0, Spring v5.3.20
+2026-02-14 13:37:08 [main] INFO  com.library.EndtermApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-14 13:37:09 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalArgumentException: No visible constructors in class com.library.patterns.Singleton.AppConfig
+	at org.springframework.cglib.proxy.Enhancer.filterConstructors(Enhancer.java:763)
+	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:662)
+	at org.springframework.cglib.transform.TransformingClassGenerator.generateClass(TransformingClassGenerator.java:33)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.generate(ClassLoaderAwareGeneratorStrategy.java:57)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:358)
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:585)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:110)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:108)
+	at org.springframework.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:134)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:319)
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:572)
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:419)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:137)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:109)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:447)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:268)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:325)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:147)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.library.EndtermApplication.main(EndtermApplication.java:11)
